@@ -1,0 +1,53 @@
+-- Create Clients table
+CREATE TABLE Clients (
+    ClientID INT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    ContactInfo VARCHAR(255),
+    Address VARCHAR(255)
+);
+
+-- Create Designers table
+CREATE TABLE Designers (
+    DesignerID INT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Specialization VARCHAR(255),
+    ContactInfo VARCHAR(255)
+);
+
+-- Create Projects table
+CREATE TABLE Projects (
+    ProjectID INT PRIMARY KEY,
+    ProjectName VARCHAR(255) NOT NULL,
+    StartDate DATE,
+    EndDate DATE,
+    ClientID INT,
+    DesignerID INT,
+    FOREIGN KEY (ClientID) REFERENCES Clients(ClientID),
+    FOREIGN KEY (DesignerID) REFERENCES Designers(DesignerID)
+);
+
+-- Create Rooms table
+CREATE TABLE Rooms (
+    RoomID INT PRIMARY KEY,
+    RoomType VARCHAR(255) NOT NULL,
+    ProjectID INT,
+    FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID)
+);
+
+-- Create Furniture table
+CREATE TABLE Furniture (
+    FurnitureID INT PRIMARY KEY,
+    FurnitureName VARCHAR(255) NOT NULL,
+    FurnitureType VARCHAR(255),
+    RoomID INT,
+    MaterialID INT,
+    FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
+    FOREIGN KEY (MaterialID) REFERENCES Materials(MaterialID)
+);
+
+-- Create Materials table
+CREATE TABLE Materials (
+    MaterialID INT PRIMARY KEY,
+    MaterialName VARCHAR(255) NOT NULL,
+    Description TEXT
+)
