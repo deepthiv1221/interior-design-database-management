@@ -1,55 +1,48 @@
 
-# 🏡 Interior Design Database Management
+🏠 Interior Design Database Management System
+This is a DBMS mini-project for managing interior design data, including clients, projects, and furniture. Built using Python, SQL, and Streamlit for a simple, interactive web interface.
 
-This project is a **simple web-based platform** designed to help manage and showcase various aspects of interior design, such as project details, designs, and client requirements. It provides a smooth way to present interior design ideas with visual elements and organized data.
+🚀 Features
+📋 Manage client records
+🛋️ Track furniture inventory
+🏗️ Manage ongoing projects
+💾 Insert and query database records easily
+🖥️ Simple Streamlit-based web UI
+🗂️ Project Structure
+sql
+Copy
+Edit
+interior-design-database-management/
+├── blue background.jpeg
+├── clients.jpeg
+├── create tables
+├── deepthi1_web.py        # Streamlit app
+├── druthi_web.py          # Another Streamlit module
+├── furniture.jpeg
+├── insert values
+├── projects.jpeg
+└── requirements.txt
+🛠️ Installation
+✅ Prerequisites
+Python 3.8+
+pip
+✅ Install dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+If you don't have a requirements.txt, you can create one with:
 
-## 🚀 Demo
+bash
+Copy
+Edit
+pip freeze > requirements.txt
+(Ensure streamlit is included.)
 
-🔗 [Live Demo](https://your-deployment-link-here) *(Replace with your deployed link)*
-
-## 📂 Project Structure
-
-```
-📦 interior-design-database-management
-│
-├── index.html        # Home page
-├── styles.css        # CSS styling
-├── script.js         # JavaScript (if any)
-├── images/          # Design images
-└── README.md
-```
-
----
-
-## ✨ Features
-
-- 🛋️ Home page with a beautiful layout showcasing interior designs.
-- 🗂️ Organized sections to display various types of rooms (living room, bedroom, kitchen, etc.).
-- 🎨 Use of modern CSS for styling and responsive design.
-- 🖼️ Image support to showcase designs.
-
----
-
-## 💻 How to Run Locally
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/deepthiv1221/interior-design-database-management.git
-   ```
-
-2. **Open the project**
-   - Open `index.html` directly in your browser.
-   - Or use a Live Server extension (in VS Code) for better results.
-
-3. **Enjoy browsing the interior designs!**
-
-
-## 📌 Future Improvements
-
-- Adding a backend for storing user inputs or design details.
-- Enabling filtering of designs based on categories.
-- Implementing a contact form.
-
-
-If you liked this project, please consider giving it a ⭐️ on [GitHub](https://github.com/deepthiv1221/interior-design-database-management)!
+💡 How to Run Locally
+bash
+Copy
+Edit
+streamlit run deepthi1_web.py
+Then open http://localhost:8501/ in your browser.
 
